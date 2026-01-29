@@ -1,0 +1,5 @@
+# kustomize renders
+dev.yaml
+prod.yaml
+*.render.yaml
+*.build.yaml
