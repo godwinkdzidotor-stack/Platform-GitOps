@@ -8,3 +8,6 @@ resources:
   - ../../platform/monitoring/overlays/dev
   - ../../platform/OTel/overlays/dev
   - ../../workloads/demo-app/overlays/dev
+  - ingress-nginx.yaml
+  - root-app.yaml
+  - namespaces.yaml
