@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - ../../platform/namespaces/base
-  - ../../platform/ingress-nginx/overlays/dev
+  - ../../platform/ingress/overlays/dev
   - ../../platform/logging/overlays/dev
   - ../../platform/monitoring/overlays/dev
   - ../../platform/OTel/overlays/dev
