@@ -14,8 +14,24 @@ spec:
       values: |
         loki:
           enabled: true
+          resources:
+            requests:
+              cpu: 200m
+              memory: 512Mi
+            limits:
+              cpu: 1
+              memory: 1Gi
+
         promtail:
           enabled: true
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+          config:
+            clients:
+              - url: http://logging-loki.logging:3100/loki/api/v1/push
+
         grafana:
           enabled: false
   destination:
@@ -28,16 +44,3 @@ spec:
     syncOptions:
       - CreateNamespace=true
       - ServerSideApply=true
-  loki:
-    resources:
-      requests:
-        cpu: 200m
-        memory: 512Mi
-      limits:
-        cpu: 1
-        memory: 1Gi
-  promtail:
-    resources:
-      requests:
-        cpu: 50m
-        memory: 128Mi
