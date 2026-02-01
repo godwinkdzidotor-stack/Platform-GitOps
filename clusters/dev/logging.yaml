@@ -28,3 +28,16 @@ spec:
     syncOptions:
       - CreateNamespace=true
       - ServerSideApply=true
+  loki:
+    resources:
+      requests:
+        cpu: 200m
+        memory: 512Mi
+      limits:
+        cpu: 1
+        memory: 1Gi
+  promtail:
+    resources:
+      requests:
+        cpu: 50m
+        memory: 128Mi
