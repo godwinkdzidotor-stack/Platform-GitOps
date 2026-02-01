@@ -11,4 +11,6 @@ resources:
   - ingress-nginx.yaml
   - root-app.yaml
   - demo-app.yaml
+  - monitoring.yaml
+  - logging.yaml
  
